@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>UNPMWR | UN Peacekeeping Mission in Western Russia</title>
+<style>/* UNPMWR - V3 Header Style (User Images) */
+:root{--un-blue:#009edb;--un-dark-blue:#1d5b79;--un-navy:#003366;--dark-gray:#333;--medium-gray:#666;--light-gray:#f5f5f5;--border-color:#e0e0e0;--link-hover:#0077b3}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Roboto, "Helvetica Neue", Arial, sans-serif;font-size:16px;line-height:1.6;color:#333;background:#fff}
+.container{max-width:1140px;margin:0 auto;padding:0 15px}
+a{color:var(--un-blue);text-decoration:none;transition:color .2s}
+a:hover{color:var(--link-hover);text-decoration:underline}
+img{max-width:100%;height:auto}
+.visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+
+/* Top Banner */
+.top-bar-wrapper{background:#fff;border-bottom:1px solid #ddd;padding:5px 0}
+.top-bar{display:flex;justify-content:flex-end;font-size:12px;color:#666}
+.top-links{list-style:none;display:flex;gap:15px;align-items:center}
+.top-links a{color:#666;text-decoration:none}
+.top-links a:hover{text-decoration:underline}
+
+/* BRANDING HEADER - User Images */
+.site-branding-area{padding:15px 0;background:#fff;border-bottom:1px solid #eee}
+.branding-container{display:flex;align-items:center;gap:30px}
+
+/* Left side: UN Logo Image */
+.branding-un{display:flex;align-items:center;text-decoration:none}
+.un-logo-img{height:65px;width:auto;object-fit:contain}
+
+/* Divider (Vertical Line) */
+.branding-divider{height:60px;width:1px;background-color:#ccc;margin:0 15px}
+
+/* Right side: Mission Logo + Text */
+.branding-mission{display:flex;align-items:center;gap:15px;flex:1}
+.mission-icon-img{height:70px;width:auto;object-fit:contain} /* The blue helmet image */
+.mission-text-group{display:flex;flex-direction:column;justify-content:center}
+.mission-acronym{font-size:24px;font-weight:700;color:#333;line-height:1.1;text-transform:uppercase}
+.mission-full-name{font-size:15px;color:#333;line-height:1.2;margin-top:2px}
+
+/* Navigation */
+.main-navigation{background:#333;color:#fff}
+.nav-list{list-style:none;display:flex;margin:0;padding:0}
+.nav-item a{display:block;padding:15px 20px;color:#fff;text-decoration:none;font-size:15px;font-weight:500;text-transform:uppercase}
+.nav-item a:hover{background:#009edb;text-decoration:none}
+
+/* Content Styles */
+.hero-section{position:relative;height:450px;background-size:cover;background-position:center;display:flex;align-items:center}
+.hero-overlay{background:rgba(0,0,0,0.4);position:absolute;inset:0}
+.hero-content{position:relative;z-index:2;color:#fff;max-width:800px;padding:0 20px}
+.hero-title{font-size:42px;font-weight:700;margin-bottom:15px;text-shadow:2px 2px 4px rgba(0,0,0,0.5)}
+.hero-lead{font-size:20px;margin-bottom:25px;text-shadow:1px 1px 2px rgba(0,0,0,0.5)}
+
+/* Sections */
+.section-wrapper{padding:60px 0}
+.section-title{font-size:28px;color:#009edb;margin-bottom:30px;padding-bottom:10px;border-bottom:2px solid #009edb;display:flex;justify-content:space-between;align-items:end}
+.view-all{font-size:14px;text-transform:uppercase;font-weight:700}
+
+/* Cards */
+.news-grid{display:grid;grid-template-columns:2fr 1fr;gap:30px}
+.news-main-card{border:1px solid #eee;border-radius:4px;overflow:hidden}
+.news-main-img{width:100%;height:350px;object-fit:cover;background:#eee}
+.news-main-body{padding:25px}
+.news-date{color:#009edb;font-weight:700;font-size:13px;text-transform:uppercase;margin-bottom:8px;display:block}
+.news-title{font-size:24px;margin-bottom:15px;color:#333;line-height:1.3}
+.news-excerpt{color:#666;margin-bottom:20px}
+
+.news-list{display:flex;flex-direction:column;gap:15px}
+.news-item-small{padding:15px;border:1px solid #eee;border-left:4px solid #009edb;background:#fff}
+.news-item-title{font-size:16px;font-weight:600;margin-top:5px;display:block;color:#333}
+
+/* Multimedia */
+.media-grid{display:grid;grid-template-columns:repeat(3, 1fr);gap:20px}
+.media-item{position:relative;height:250px;background:#333;border-radius:4px;overflow:hidden;text-decoration:none;display:block}
+.media-img{width:100%;height:100%;object-fit:cover;opacity:0.8;transition:opacity .3s}
+.media-item:hover .media-img{opacity:1}
+.media-info{position:absolute;bottom:0;left:0;right:0;padding:15px;background:linear-gradient(transparent, rgba(0,0,0,0.8));color:#fff}
+.media-type{font-size:10px;text-transform:uppercase;background:#009edb;padding:2px 6px;border-radius:2px;display:inline-block;margin-bottom:5px}
+.media-title{font-size:16px;font-weight:600;display:block;color:#fff}
+
+/* Footer Exact Replica */
+.footer-main{background:#4a4a4a;color:#fff;padding:50px 0}
+.footer-cols{display:grid;grid-template-columns:repeat(4, 1fr);gap:30px}
+.footer-heading{color:#009edb;text-transform:uppercase;font-size:16px;margin-bottom:20px;font-weight:700}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:10px}
+.footer-links a{color:#ddd;font-size:14px}
+.footer-links a:hover{color:#fff}
+
+.footer-bottom{background:#333;padding:20px 0;color:#aaa;font-size:12px;border-top:1px solid #555}
+.footer-legal{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.legal-link{color:#aaa;text-transform:uppercase}
+.legal-sep{color:#555}
+.donate-btn{background:#009edb;color:#fff;padding:5px 15px;font-weight:700;border-radius:3px;text-transform:uppercase;margin-left:auto}
+
+/* Responsive */
+@media(max-width:768px){
+    .branding-container{flex-direction:column;align-items:flex-start;gap:15px}
+    .branding-divider{display:none}
+    .news-grid, .media-grid, .footer-cols{grid-template-columns:1fr}
+    .nav-list{flex-direction:column}
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="top-bar-wrapper">
+    <div class="container top-bar">
+        <ul class="top-links">
+             <li><a href="unpmwr_en_v3.html">English</a></li>
+             <li><a href="unpmwr_fr_v3.html">Français</a></li>
+             <li><a href="unpmwr_es_v3.html">Español</a></li>
+             <li><a href="unpmwr_ru_v3.html">Русский</a></li>
+             <li><a href="unpmwr_ar_v3.html">العربية</a></li>
+             <li><a href="unpmwr_zh_v3.html">中文</a></li>
+             <li><a href="#">Search 🔍</a></li>
+        </ul>
+    </div>
+</div>
+
+<header class="site-branding-area">
+    <div class="container branding-container">
+        <!-- LEFT: USER PROVIDED UN LOGO -->
+        <a href="#" class="branding-un">
+            <!-- Using the filename you provided for the masthead -->
+            <img src="https://i.imgur.com/xJEJ5VS.png" alt="UN Logo" class="un-logo-img">
+        </a>
+
+        <!-- DIVIDER -->
+        <div class="branding-divider"></div>
+
+        <!-- RIGHT: MISSION LOGO -->
+        <div class="branding-mission">
+            <!-- Using the filename you provided for the blue helmet logo -->
+            <img src="https://i.imgur.com/14MWlbX.png" alt="Mission Logo" class="mission-icon-img">
+
+            <div class="mission-text-group">
+                <span class="mission-acronym">UNPMWR</span>
+                <span class="mission-full-name">United Nations Peacekeeping Mission in Western Russia</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<nav class="main-navigation">
+    <div class="container">
+        <ul class="nav-list">
+            <li class="nav-item"><a href="#">Who we are</a></li>
+            <li class="nav-item"><a href="#">What we do</a></li>
+            <li class="nav-item"><a href="#">News</a></li>
+            <li class="nav-item"><a href="#">Multimedia</a></li>
+            <li class="nav-item"><a href="#">Resources</a></li>
+            <li class="nav-item"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="hero-section" style="background-image: url('https://images.unsplash.com/photo-1579370900332-601e3b567d26?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80')">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title">Supporting Democratic Transition</h1>
+        <p class="hero-lead">UNPMWR protects civilians and supports peace consolidation in the region.</p>
+        <a href="#" class="donate-btn" style="padding:15px 30px; font-size:16px; text-decoration:none">Learn More</a>
+    </div>
+</section>
+
+<div class="container section-wrapper">
+    <div class="section-title">
+        <h2>Latest News</h2>
+        <a href="#" class="view-all">View All →</a>
+    </div>
+    <div class="news-grid">
+        <article class="news-main-card">
+            <div class="news-main-img" style="background:#ddd; display:flex; align-items:center; justify-content:center; color:#666">IMAGE 800x400</div>
+            <div class="news-main-body">
+                <span class="news-date">14 FEB 2026</span>
+                <h3 class="news-title">Former fighters lay down arms in Bryansk</h3>
+                <p class="news-excerpt">250 combatants surrendered weapons today.</p>
+                <a href="#">Read Story →</a>
+            </div>
+        </article>
+        <div class="news-list">
+            <article class="news-item-small">
+                <span class="news-date">10 FEB</span>
+                <span class="news-item-title">SRSG meets transition authorities</span>
+            </article>
+            <article class="news-item-small">
+                <span class="news-date">05 FEB</span>
+                <span class="news-item-title">Protection zones in Smolensk</span>
+            </article>
+            <article class="news-item-small">
+                <span class="news-date">28 JAN</span>
+                <span class="news-item-title">15,000 returns to Kursk</span>
+            </article>
+        </div>
+    </div>
+</div>
+
+<div class="container section-wrapper" style="padding-top:0">
+    <div class="section-title">
+        <h2>Multimedia Gallery</h2>
+        <a href="#" class="view-all">View Gallery →</a>
+    </div>
+    <div class="media-grid">
+        <a href="#" class="media-item">
+            <img src="https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="media-img" alt="Media 1">
+            <div class="media-info">
+                <span class="media-type">Video</span>
+                <span class="media-title">Reintegration Stories</span>
+            </div>
+        </a>
+        <a href="#" class="media-item">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="media-img" alt="Media 2">
+            <div class="media-info">
+                <span class="media-type">Photo</span>
+                <span class="media-title">Joint Patrols</span>
+            </div>
+        </a>
+        <a href="#" class="media-item">
+            <img src="https://images.unsplash.com/photo-1494412519320-aa613b4840bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="media-img" alt="Media 3">
+            <div class="media-info">
+                <span class="media-type">Photo</span>
+                <span class="media-title">Aid Distribution</span>
+            </div>
+        </a>
+    </div>
+</div>
+
+<footer class="footer-main">
+    <div class="container footer-cols">
+        <div>
+            <h4 class="footer-heading">About</h4>
+            <ul class="footer-links">
+                <li><a href="#">Mandate</a></li>
+                <li><a href="#">Leadership</a></li>
+                <li><a href="#">Deployment</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="footer-heading">Work</h4>
+            <ul class="footer-links">
+                <li><a href="#">Military</a></li>
+                <li><a href="#">Police</a></li>
+                <li><a href="#">Human Rights</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="footer-heading">News</h4>
+            <ul class="footer-links">
+                <li><a href="#">Press Releases</a></li>
+                <li><a href="#">Statements</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="footer-heading">Docs</h4>
+            <ul class="footer-links">
+                <li><a href="#">Reports</a></li>
+                <li><a href="#">Resolutions</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<div class="footer-bottom">
+    <div class="container">
+        <div class="footer-legal">
+            <a href="#" class="legal-link">Terms of Use</a> <span class="legal-sep">|</span>
+            <a href="#" class="legal-link">Privacy</a> <span class="legal-sep">|</span>
+            <a href="#" class="legal-link">Fraud Alert</a>
+            <a href="#" class="donate-btn">Donate</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
